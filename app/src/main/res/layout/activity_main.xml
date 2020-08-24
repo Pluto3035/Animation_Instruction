@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/mAlphaOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:text="淡出"
+        app:layout_constraintEnd_toStartOf="@+id/mAlphaIn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/holo_orange_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/mAlphaIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="淡入"
+        app:layout_constraintEnd_toStartOf="@+id/mMove"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mAlphaOut"
+        app:layout_constraintTop_toTopOf="@+id/mAlphaOut" />
+
+    <Button
+        android:id="@+id/mMove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="移动"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mAlphaIn"
+        app:layout_constraintTop_toTopOf="@+id/mAlphaIn" />
+
+    <Button
+        android:id="@+id/mSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="综合"
+        app:layout_constraintStart_toStartOf="@+id/mAlphaOut"
+        app:layout_constraintTop_toBottomOf="@+id/mAlphaOut" />
+
+    <Button
+        android:id="@+id/mScale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="缩放"
+        app:layout_constraintStart_toStartOf="@+id/mMove"
+        app:layout_constraintTop_toTopOf="@+id/mRotate" />
+
+    <Button
+        android:id="@+id/mRotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="旋转"
+        app:layout_constraintStart_toStartOf="@+id/mAlphaIn"
+        app:layout_constraintTop_toTopOf="@+id/mSet" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
